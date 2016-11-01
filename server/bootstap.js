@@ -8,6 +8,18 @@ Meteor.startup(function() {
   }]);
   Games.insert([{
     _id: 1,
-    name: 'China Land'
-  }])
+    name: 'Lazer Brigade'
+  }]);
+  Games.insert([{
+    _id: 2,
+    name: 'FireFart'
+  }]);
+  Games.insert([{
+    _id: 3,
+    name: 'Red'
+  }]);
+  Games.insert([{
+    _id: 4,
+    name: 'Seek and Destroy'
+  }]);
 });
