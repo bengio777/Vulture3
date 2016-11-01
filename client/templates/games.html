@@ -1,4 +1,7 @@
 <ion-view view-title="Games">
+  <ion-nav-buttons side="right">
+   <button ng-click="games.showNewGameModal()" class="button button-clear button-positive button-icon ion-ios-compose-outline"></button>
+  </ion-nav-buttons>
   <ion-content>
     <ion-list>
        <ion-item ng-repeat="game in games.data | orderBy:'-lastMessage.timestamp'"
