@@ -9,6 +9,9 @@ import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
 
 // Modules
+import TasksCntrl from '../controllers/tasks.controller';
+import MembersCntrl from '../controllers/members.controller';
+import GamesCntrl from '../controllers/games.controller';
 import RoutesConfig from '../routes';
 
 const App = 'Whatsapp';
@@ -21,6 +24,9 @@ Angular.module(App, [
 
 
 new Loader(App)
+  .load(TasksCntrl)
+  .load(MembersCntrl)
+  .load(GamesCntrl)
   .load(RoutesConfig);
 
 // Startup

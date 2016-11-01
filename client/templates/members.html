@@ -1,0 +1,18 @@
+<ion-view view-title="Members">
+  <ion-content>
+
+    <ion-list>
+       <ion-item ng-repeat="member in members.data | orderBy:'-lastMessage.timestamp'"
+                 class="item-member item-remove-animate item-avatar item-icon-right"
+                 type="item-text-wrap">
+         <img ng-src="{{ member.picture }}">
+         <h2>{{ member.name }}</h2>
+         <p>{{ member.lastMessage.text }}</p>
+         <span class="last-message-timestamp">{{ member.lastMessage.timestamp }}</span>
+         <i class="icon ion-chevron-right icon-accessory"></i>
+       </ion-item>
+     </ion-list>
+
+
+  </ion-content>
+</ion-view>
