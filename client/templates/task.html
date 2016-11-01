@@ -17,6 +17,20 @@
        </ion-item>
      </ion-list>
 
+     <div class="task-camera-button">
+       <button on-tap='onTap()' class='button'>
+         <a class="ion ion-camera icon-accessory task-picture positive" ng-click="task.updateImage()">
+               <div ng-if="task.currentUser.task.image">
+                 <img ng-src="{{ profile.currentUser.task.image }}" alt="task image">
+                 edit
+               </div>
+               <div ng-if="!task.currentUser.task.image" class="upload-placehoder">
+                 Add Image
+               </div>
+             </a>
+        </button>
+     </div>
+
 
   </ion-content>
 </ion-view>
