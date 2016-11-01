@@ -1,0 +1,2 @@
+## Do we install and use sass?
+  -- $ meteor add fourseven:scss
