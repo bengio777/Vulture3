@@ -11,7 +11,7 @@ export default class MembersCntrl  extends Controller {
         name: 'Ethan Gonzalez',
         picture: 'https://randomuser.me/api/portraits/thumb/men/1.jpg',
         lastMessage: {
-          text: 'You on your way?',
+          text: 'Feed Me A Stray Cat!',
           timestamp: Moment().subtract(1, 'hours').toDate()
         }
       },
@@ -20,7 +20,7 @@ export default class MembersCntrl  extends Controller {
         name: 'Bryan Wallace',
         picture: 'https://randomuser.me/api/portraits/thumb/lego/1.jpg',
         lastMessage: {
-          text: 'Hey, it\'s me',
+          text: 'Its Your Mother. Call me!!!',
           timestamp: Moment().subtract(2, 'hours').toDate()
         }
       },
@@ -29,7 +29,7 @@ export default class MembersCntrl  extends Controller {
         name: 'Avery Stewart',
         picture: 'https://randomuser.me/api/portraits/thumb/women/1.jpg',
         lastMessage: {
-          text: 'I should buy a boat',
+          text: 'You bet I work the pole!',
           timestamp: Moment().subtract(1, 'days').toDate()
         }
       },
@@ -38,7 +38,7 @@ export default class MembersCntrl  extends Controller {
         name: 'Katie Peterson',
         picture: 'https://randomuser.me/api/portraits/thumb/women/2.jpg',
         lastMessage: {
-          text: 'Look at my mukluks!',
+          text: 'Meteor Paired w Ionic is a robust coupling of technologies I do say!',
           timestamp: Moment().subtract(4, 'days').toDate()
         }
       },
@@ -47,12 +47,16 @@ export default class MembersCntrl  extends Controller {
         name: 'Ray Edwards',
         picture: 'https://randomuser.me/api/portraits/thumb/men/2.jpg',
         lastMessage: {
-          text: 'This is wicked good ice cream.',
+          text: 'Saaah Dude.',
           timestamp: Moment().subtract(2, 'weeks').toDate()
         }
       }
     ];
   }
+
+ remove(member) {
+   this.data.splice(this.data.indexOf(member), 1);
+ }
 }
 
 MembersCntrl.$name = 'MembersCntrl';

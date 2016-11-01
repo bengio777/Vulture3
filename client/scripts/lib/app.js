@@ -12,6 +12,7 @@ import { Meteor } from 'meteor/meteor';
 import TasksCntrl from '../controllers/tasks.controller';
 import MembersCntrl from '../controllers/members.controller';
 import GamesCntrl from '../controllers/games.controller';
+import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
 
 const App = 'Whatsapp';
@@ -27,6 +28,7 @@ new Loader(App)
   .load(TasksCntrl)
   .load(MembersCntrl)
   .load(GamesCntrl)
+  .load(CalendarFilter)
   .load(RoutesConfig);
 
 // Startup

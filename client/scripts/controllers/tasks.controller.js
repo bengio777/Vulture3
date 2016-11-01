@@ -28,6 +28,9 @@ export default class TasksCntrl extends Controller {
       }
     ];
   }
+  remove(task) {
+    this.data.splice(this.data.indexOf(task), 1);
+  }
 }
 
 TasksCntrl.$name = 'TasksCntrl';

@@ -10,6 +10,11 @@
 
          <span class="last-message-timestamp">{{ task.lastMessage.timestamp }}</span>
          <i class="icon ion-chevron-right icon-accessory"></i>
+
+         <ion-option-button class="button-assertive" ng-click="tasks.remove(task)">
+           Delete
+         </ion-option-button>
+
        </ion-item>
      </ion-list>
 

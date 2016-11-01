@@ -8,8 +8,13 @@
          <img ng-src="{{ member.picture }}">
          <h2>{{ member.name }}</h2>
          <p>{{ member.lastMessage.text }}</p>
-         <span class="last-message-timestamp">{{ member.lastMessage.timestamp }}</span>
+         <span class="last-message-timestamp">{{ member.lastMessage.timestamp | calendar }}</span>
          <i class="icon ion-chevron-right icon-accessory"></i>
+
+         <ion-option-button class="button-assertive" ng-click="chats.remove(chat)">
+            Delete
+          </ion-option-button>
+
        </ion-item>
      </ion-list>
 
