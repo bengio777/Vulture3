@@ -8,16 +8,40 @@ export default class RoutesConfig extends Config {
         abstract: true,
         templateUrl: 'client/templates/tabs.html'
       })
-      .state('tab.chats', {
-        url: '/chats',
+      .state('tab.games', {
+        url: '/games',
         views: {
-          'tab-chats': {
-            templateUrl: 'client/templates/chats.html'
+          'tab-games': {
+            templateUrl: 'client/templates/games.html'
+          }
+        }
+      })
+      .state('tab.tasks', {
+        url: '/tasks',
+        views: {
+          'tab-tasks': {
+            templateUrl: 'client/templates/tasks.html'
+          }
+        }
+      })
+      .state('tab.team', {
+        url: '/team',
+        views: {
+          'tab-team': {
+            templateUrl: 'client/templates/team.html'
+          }
+        }
+      })
+      .state('tab.profile', {
+        url: '/profile',
+        views: {
+          'tab-profile': {
+            templateUrl: 'client/templates/profile.html'
           }
         }
       });
 
-    this.$urlRouterProvider.otherwise('tab/chats');
+    this.$urlRouterProvider.otherwise('tab/games');
   }
 }
 

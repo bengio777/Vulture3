@@ -10,6 +10,7 @@ import { Meteor } from 'meteor/meteor';
 
 // Modules
 import RoutesConfig from '../routes';
+
 const App = 'Whatsapp';
 
 // App
@@ -18,10 +19,11 @@ Angular.module(App, [
   'ionic'
 ]);
 
-// Startup
+
 new Loader(App)
   .load(RoutesConfig);
- 
+
+// Startup
 if (Meteor.isCordova) {
   Angular.element(document).on('deviceready', onReady);
 }
