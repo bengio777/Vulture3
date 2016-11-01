@@ -1,9 +1,11 @@
+import { Meteor } from 'meteor/meteor'
+
 ServiceConfiguration.configurations.remove({
     service: 'facebook'
 });
 
 ServiceConfiguration.configurations.insert({
     service: 'facebook',
-    appId: '12345678901234567890',
-    secret: 'secret12345678901234567890'
+    appId: '1113343665413429',
+    secret: 'fc3b67f18e861a86ff5b1c434e43b582'
 });
