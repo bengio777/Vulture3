@@ -38,6 +38,7 @@ export default class GamesCntrl  extends Controller {
       }
     ];
   }
+  
   remove(game) {
     this.data.splice(this.data.indexOf(game), 1);
   }
