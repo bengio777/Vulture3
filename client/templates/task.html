@@ -1,0 +1,22 @@
+<ion-view view-title="Task">
+  <ion-content>
+
+    <ion-list>
+       <ion-item ng-repeat="task in task.data"
+                 class="item-game item-remove-animate item-avatar item-icon-right"
+                 type="item-text-wrap">
+         <!-- <img ng-src="{{ game.picture }}"> -->
+         <h2>{{ task.name }}</h2>
+         <!-- <p>{{ game.lastMessage.text }}</p> -->
+         <i class="icon ion-chevron-right icon-accessory"></i>
+
+         <!-- <ion-option-button class="button-assertive" ng-click="task.remove(game)">
+            MAKE SUBMIT BUTTON WITH CAMERA ICON WITH DIV NG-IF PICTURE SHOW PICTURE
+          </ion-option-button> -->
+
+       </ion-item>
+     </ion-list>
+
+
+  </ion-content>
+</ion-view>

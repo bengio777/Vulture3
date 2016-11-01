@@ -9,6 +9,7 @@ import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
 
 // Modules
+import TaskCntrl from '../controllers/task.controller';
 import MembersCntrl from '../controllers/members.controller';
 import GamesCntrl from '../controllers/games.controller';
 import GameCntrl from '../controllers/game.controller';
@@ -25,6 +26,7 @@ Angular.module(App, [
 
 
 new Loader(App)
+  .load(TaskCntrl)
   .load(MembersCntrl)
   .load(GamesCntrl)
   .load(GameCntrl)
