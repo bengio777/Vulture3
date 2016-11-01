@@ -9,13 +9,13 @@ import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
 
 // Modules
-import TasksCntrl from '../controllers/tasks.controller';
 import MembersCntrl from '../controllers/members.controller';
 import GamesCntrl from '../controllers/games.controller';
+import GameCntrl from '../controllers/game.controller';
 import CalendarFilter from '../filters/calendar.filter';
 import RoutesConfig from '../routes';
 
-const App = 'Whatsapp';
+const App = 'Vulture';
 
 // App
 Angular.module(App, [
@@ -25,9 +25,9 @@ Angular.module(App, [
 
 
 new Loader(App)
-  .load(TasksCntrl)
   .load(MembersCntrl)
   .load(GamesCntrl)
+  .load(GameCntrl)
   .load(CalendarFilter)
   .load(RoutesConfig);
 

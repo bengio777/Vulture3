@@ -17,21 +17,21 @@ export default class RoutesConfig extends Config {
           }
         }
       })
+      .state('tab.game', {
+        url: '/games/:gameId',
+        views: {
+          'tab-games': {
+            templateUrl: 'client/templates/game.html',
+            controller: 'GameCntrl as game'
+          }
+        }
+      })
       .state('tab.members', {
         url: '/members',
         views: {
           'tab-members': {
             templateUrl: 'client/templates/members.html',
             controller: 'MembersCntrl as members'
-          }
-        }
-      })
-      .state('tab.tasks', {
-        url: '/tasks',
-        views: {
-          'tab-tasks': {
-            templateUrl: 'client/templates/tasks.html',
-            controller: 'TasksCntrl as tasks'
           }
         }
       })
