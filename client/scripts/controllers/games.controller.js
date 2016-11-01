@@ -8,7 +8,7 @@ export default class GamesCntrl extends Controller {
 
     this.helpers({
       data() {
-        return Chats.find();
+        return Games.find();
       }
     })
   }
