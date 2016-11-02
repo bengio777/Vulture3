@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-// import { MeteorCameraUI } from 'meteor/okland:camera-ui';
+import { MeteorCameraUI } from 'meteor/perak:camera';
 import { Controller } from 'angular-ecmascript/module-helpers';
 import { Images } from '../../../lib/collections';
 
@@ -24,35 +24,22 @@ export default class NewImageCntrl extends Controller {
 
   takePicture () {
     // alert('Working. Kinda')
-    MeteorCameraUI.getPicture({ width: 200, height: 200 }, (data) =>{
-      this.callMethod('takePicture', (data) => {
-      this.$ionicLoading.hide();
+    var self = this;
+    MeteorCamera.getPicture({ width: 200, height: 200 }, function (data) {
+      self.callMethod('takePicture', function (data) {
+      self.$ionicLoading.hide();
+
+//       if (stream) {
+//         stream.getTracks().forEach(function (track) { track.stop();
+//       });
+// }
       })
     })
+    stream.stop();
   }
 
-  updatePicture () {
-    alert('Also kinda woorking')
-  }
+};
 
-}
-
-
-
-// updatePicture () {
-//   MeteorCameraUI.getPicture({ width: 200, height: 200 }, (err, data) => {
-//     if (err) return this.handleError(err);
-//
-//     this.$ionicLoading.show({
-//       template: 'Updating picture...'
-//     });
-//
-//     this.callMethod('updatePicture', data, (err) => {
-//       this.$ionicLoading.hide();
-//       this.handleError(err);
-//     });
-//   });
-// }
 
 NewImageCntrl.$name = 'NewImageCntrl';
 NewImageCntrl.$inject = ['$state', 'NewImage', '$ionicPopup', '$log'];
