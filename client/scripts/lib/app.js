@@ -27,6 +27,7 @@ const App = 'Vulture';
 // App
 Angular.module(App, [
   'angular-meteor',
+  'accounts.ui',
   'ionic'
 ]);
 
