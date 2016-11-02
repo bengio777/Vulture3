@@ -23,20 +23,20 @@ export default class NewImageCntrl extends Controller {
   }
 }
 
-updatePicture () {
-  MeteorCameraUI.getPicture({ width: 200, height: 200 }, (err, data) => {
-    if (err) return this.handleError(err);
-
-    this.$ionicLoading.show({
-      template: 'Updating picture...'
-    });
-
-    this.callMethod('updatePicture', data, (err) => {
-      this.$ionicLoading.hide();
-      this.handleError(err);
-    });
-  });
-}
+// updatePicture () {
+//   MeteorCameraUI.getPicture({ width: 200, height: 200 }, (err, data) => {
+//     if (err) return this.handleError(err);
+//
+//     this.$ionicLoading.show({
+//       template: 'Updating picture...'
+//     });
+//
+//     this.callMethod('updatePicture', data, (err) => {
+//       this.$ionicLoading.hide();
+//       this.handleError(err);
+//     });
+//   });
+// }
 
 NewImageCntrl.$name = 'NewImageCntrl';
 NewImageCntrl.$inject = ['$state', 'NewImage', '$ionicPopup', '$log'];
