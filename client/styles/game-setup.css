@@ -1,0 +1,24 @@
+.setupHeader {
+  width: 100%;
+  text-align: center;
+  color: navy;
+  padding: 10px 0px;
+}
+
+.setupInstructions {
+  width: 100%;
+  text-align: center;
+}
+
+.setupTasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.setupTaskBar {
+  width: 80%;
+  color: orange;
+}

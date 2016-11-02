@@ -1,6 +1,18 @@
 <ion-view view-title="Game Setup">
   <ion-content>
-    <h1>{{setup.data}}</h1>
+    <h1 class='setupHeader'>{{setup.data.name}}</h1>
+
+    <p class='setupInstructions'>
+      Create tasks for your players to complete!
+    </p>
+
+    <div class="setupTasks">
+      <div ng-repeat="task in setup.tasks" class="setupTaskBar">
+          <h2>{{task.content}}</h2>
+      </div>
+      <input type="text" ng-model="setup.newTaskContent" name="name" placeholder="Describe a new task.">
+      <button type="button" ng-click="setup.addNewTask()" name="button">Add</button>
+    </div>
 
   </ion-content>
 </ion-view>

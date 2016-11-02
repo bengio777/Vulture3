@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Controller } from 'angular-ecmascript/module-helpers';
-import { Games } from '../../../lib/collections';
+import { Games, Tasks } from '../../../lib/collections';
 
 export default class GameSetupCntrl extends Controller {
   constructor() {
@@ -11,8 +11,21 @@ export default class GameSetupCntrl extends Controller {
     this.helpers({
       data() {
         return Games.findOne(this.gameId);
+      },
+      tasks() {
+        return Tasks.find({ gameId: this.gameId})
       }
     });
+  }
+
+  addNewTask() {
+    alert("Adding '"+this.newTaskContent+"' to game "+this.gameId);
+
+    this.callMethod('newTask', this.newTaskContent, this.gameId, (err, taskId) => {
+      if (err) return this.handleError(err);
+    });
+
+    delete this.newTaskContent;
   }
 
   newGame(userId) {

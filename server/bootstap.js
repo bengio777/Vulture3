@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Games, Tasks, Requirements, Images } from '../lib/collections';
 
 Meteor.startup(function() {
-  Games.insert({
+  let g0 = Games.insert({
     name: 'Twerk or Treat'
   });
   Games.insert({
@@ -17,4 +17,8 @@ Meteor.startup(function() {
   Games.insert({
     name: 'Seek and Destroy'
   });
+  Tasks.insert({
+    gameId: g0,
+    content: "Find a dog."
+  })
 });
