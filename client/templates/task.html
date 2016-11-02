@@ -5,32 +5,22 @@
        <ion-item ng-repeat="task in task.data"
                  class="item-game item-remove-animate item-avatar item-icon-right"
                  type="item-text-wrap">
-         <!-- <img ng-src="{{ game.picture }}"> -->
-         <h2>{{ task.name }}</h2>
-         <!-- <p>{{ game.lastMessage.text }}</p> -->
-         <i class="icon ion-chevron-right icon-accessory"></i>
 
-         <!-- <ion-option-button class="button-assertive" ng-click="task.remove(game)">
-            MAKE SUBMIT BUTTON WITH CAMERA ICON WITH DIV NG-IF PICTURE SHOW PICTURE
-          </ion-option-button> -->
+         <h2>{{ task.name }}</h2>
+
+         <i class="icon ion-chevron-right icon-accessory"></i>
 
        </ion-item>
      </ion-list>
 
-     <div class="task-camera-button">
-       <button on-tap='onTap()' class='button'>
-         <a class="ion ion-camera icon-accessory task-picture positive" ng-click="task.updateImage()">
-               <div ng-if="task.currentUser.task.image">
-                 <img ng-src="{{ profile.currentUser.task.image }}" alt="task image">
-                 edit
-               </div>
-               <div ng-if="!task.currentUser.task.image" class="upload-placehoder">
-                 Add Image
-               </div>
-             </a>
+       <button ng-click="task.showNewImageModal()" class='button ion ion-camera icon-accessory task-picture positive task-camera-button'>
         </button>
-     </div>
 
+//CREATE A SPACE TO BIND PHOTO TAKEN WITH CAMERA APPLICATION
+
+  <!-- <div class="image-from-camera">
+    {{ What to CALL IT? image.comfirm-image??? }}
+  </div> -->
 
   </ion-content>
 </ion-view>
