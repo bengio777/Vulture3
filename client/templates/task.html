@@ -1,17 +1,6 @@
 <ion-view view-title="Task">
   <ion-content>
-
-    <ion-list>
-       <ion-item ng-repeat="task in task.data"
-                 class="item-game item-remove-animate item-avatar item-icon-right"
-                 type="item-text-wrap">
-
-         <h2>{{ task.name }}</h2>
-
-         <i class="icon ion-chevron-right icon-accessory"></i>
-
-       </ion-item>
-     </ion-list>
+      
 
        <button ng-click="task.showNewImageModal()" class='button ion ion-camera icon-accessory task-picture positive task-camera-button'>
         </button>
