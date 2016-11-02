@@ -9,6 +9,7 @@ import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
 
 // Modules
+import NewImageCntrl from '../controllers/new-image.controller';
 import TaskCntrl from '../controllers/task.controller';
 import MembersCntrl from '../controllers/members.controller';
 import GamesCntrl from '../controllers/games.controller';
@@ -17,6 +18,7 @@ import NewGameCntrl from '../controllers/new-game.controller';
 import GameSetupCntrl from '../controllers/game-setup.controller';
 import CalendarFilter from '../filters/calendar.filter';
 import NewGameService from '../services/new-game.service';
+import NewImageService from '../services/new-image.service';
 import RoutesConfig from '../routes';
 
 
@@ -30,6 +32,7 @@ Angular.module(App, [
 
 
 new Loader(App)
+  .load(NewImageCntrl)
   .load(TaskCntrl)
   .load(MembersCntrl)
   .load(GamesCntrl)
@@ -38,6 +41,7 @@ new Loader(App)
   .load(GameSetupCntrl)
   .load(CalendarFilter)
   .load(NewGameService)
+  .load(NewImageService)
   .load(RoutesConfig);
 
 // Startup
