@@ -1,0 +1,24 @@
+<ion-modal-view ng-controller="NewImageCntrl as image">
+    <div>
+      <ion-header-bar>
+        <h1 class="title">Submit New Image</h1>
+        <div class="buttons">
+          <button ng-click="image.hideNewImageModal()" class="button button-clear button-positive" >Cancel</button>
+        </div>
+      </ion-header-bar>
+    </div>
+  <ion-content>
+
+    <div class="task-camera-button">
+
+      <button ng-click="image.takePicture()" class='button ion-ios-upload icon-accessory task-picture positive'>
+       </button>
+
+       <button ng-click="image.updatePicture()" class='button ion-ios-loop-strong icon-accessory task-picture positive'>
+        </button>
+
+        
+
+  </ion-content>
+
+</ion-modal-view>
