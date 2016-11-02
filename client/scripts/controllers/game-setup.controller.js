@@ -28,14 +28,23 @@ export default class GameSetupCntrl extends Controller {
     delete this.newTaskContent;
   }
 
-  newGame(userId) {
-
-    // this.callMethod('newGame', this.newGameTitle, userId, (err, gameId) => {
-    //   this.hideNewGameModal();
-    //   if (err) return this.handleError(err);
-    //   this.goToSetup(gameId);
-    // });
+  createGame() {
+    alert("Creating Game "+this.gameId);
+    this.callMethod('createGame', this.gameId, (err, gameId) => {
+      if (err) return this.handleError(err);
+      this.goToGame(gameId)
+    });
   }
+
+
+  cancelGame() {
+    alert("Cancelling Game "+this.gameId)
+  }
+
+  goToGame(gameId) {
+    this.$state.go('tab.game', { gameId });
+  }
+
   handleError(err) {
     this.$log.error('New game creation error ', err);
 

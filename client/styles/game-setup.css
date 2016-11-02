@@ -16,9 +16,51 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: lightgray;
+  padding-top: 20px;
 }
 
 .setupTaskBar {
   width: 80%;
   color: orange;
+}
+
+.infoTaker {
+  width: 80%;
+  color: black;
+
+}
+
+.setupButtons {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 10px auto;
+  background-color: darkgrey;
+}
+
+.setupButtons button {
+  margin: 10px auto;
+}
+
+.button-add {
+  margin: 10px 0px;
+}
+
+.button-35 {
+  width: 35%;
+  padding: 5px 0px;
+  font-weight: bold;
+}
+
+.okay {
+  background-color: lightblue;
+}
+
+.good {
+  background-color: lightgreen;
+}
+
+.bad {
+  background-color: red;
 }

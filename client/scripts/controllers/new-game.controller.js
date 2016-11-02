@@ -14,6 +14,7 @@ export default class NewGameCntrl extends Controller {
     //   this.hideNewGameModal();
     //   return this.goToGame(game._id);
     // }
+    if (!this.newGameTitle) return false;
 
     this.callMethod('newGame', this.newGameTitle, userId, (err, gameId) => {
       this.hideNewGameModal();

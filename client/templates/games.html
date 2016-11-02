@@ -4,7 +4,7 @@
   </ion-nav-buttons>
   <ion-content>
     <ion-list>
-       <ion-item ng-repeat="game in games.data | orderBy:'-lastMessage.timestamp'"
+       <ion-item ng-repeat="game in games.data | orderBy:'-lastMessage.timestamp'" ng-if="game.isCreated"
                  class="item-game item-remove-animate item-avatar item-icon-right"
                  type="item-text-wrap" href="#/tab/games/{{ game._id }}">
          <h2>{{ game.name }}</h2>

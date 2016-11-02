@@ -10,8 +10,13 @@
       <div ng-repeat="task in setup.tasks" class="setupTaskBar">
           <h2>{{task.content}}</h2>
       </div>
-      <input type="text" ng-model="setup.newTaskContent" name="name" placeholder="Describe a new task.">
-      <button type="button" ng-click="setup.addNewTask()" name="button">Add</button>
+      <input type="text" class="infoTaker" ng-model="setup.newTaskContent" name="name" placeholder="  Describe a new task.">
+      <button type="button" class="button-35 button-add okay" ng-click="setup.addNewTask()" name="button">Add</button>
+    </div>
+
+    <div class="setupButtons">
+      <button type="button" class="button-35 good" ng-click="setup.createGame()">Create</button>
+      <button type="button" class="button-35 bad" ng-click="setup.cancelGame()">Cancel</button>
     </div>
 
   </ion-content>
