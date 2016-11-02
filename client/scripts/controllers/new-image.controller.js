@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { MeteorCameraUI } from 'meteor/okland:camera-ui';
+// import { MeteorCameraUI } from 'meteor/okland:camera-ui';
 import { Controller } from 'angular-ecmascript/module-helpers';
 import { Images } from '../../../lib/collections';
 
@@ -21,7 +21,23 @@ export default class NewImageCntrl extends Controller {
       okType: 'button-positive button-clear'
     });
   }
+
+  takePicture () {
+    // alert('Working. Kinda')
+    MeteorCameraUI.getPicture({ width: 200, height: 200 }, (data) =>{
+      this.callMethod('takePicture', (data) => {
+      this.$ionicLoading.hide();
+      })
+    })
+  }
+
+  updatePicture () {
+    alert('Also kinda woorking')
+  }
+
 }
+
+
 
 // updatePicture () {
 //   MeteorCameraUI.getPicture({ width: 200, height: 200 }, (err, data) => {
