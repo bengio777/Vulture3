@@ -4,21 +4,22 @@ import { Games } from '../../../lib/collections';
 
 export default class NewGameCntrl extends Controller {
   constructor() {
-    super(...arguments); 
+    super(...arguments);
   }
 
   newGame(userId) {
-    let game = Games.findOne({ userIds: { $all: [this.currentUserId, userId] } });
+    // let game = Games.findOne({ userIds: { $all: [this.currentUserId, userId] } });
+    // alert("User "+userId+" is trying to create a game called "+newGameTitle);
+    // if (game) {
+    //   this.hideNewGameModal();
+    //   return this.goToGame(game._id);
+    // }
+    if (!this.newGameTitle) return false;
 
-    if (game) {
-      this.hideNewGameModal();
-      return this.goToGame(game._id);
-    }
-
-    this.callMethod('newGame', userId, (err, gameId) => {
+    this.callMethod('newGame', this.newGameTitle, userId, (err, gameId) => {
       this.hideNewGameModal();
       if (err) return this.handleError(err);
-      this.goToGame(gameId);
+      this.goToSetup(gameId);
     });
   }
 
@@ -28,6 +29,11 @@ export default class NewGameCntrl extends Controller {
 
   goToGame(gameId) {
     this.$state.go('tab.game', { gameId });
+  }
+
+  goToSetup(gameId) {
+    alert("Game id: "+gameId)
+    this.$state.go('tab.setup', { gameId });
   }
 
   handleError(err) {
