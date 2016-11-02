@@ -60,14 +60,6 @@ export default class RoutesConfig extends Config {
             templateUrl: 'client/templates/profile.html'
           }
         }
-      })
-      .state('tab.login', {
-        url: '/login',
-        views: {
-          'tab-login': {
-            templateUrl: 'client/templates/login.html'
-          }
-        }
       });
 
     this.$urlRouterProvider.otherwise('tab/games');
