@@ -2,11 +2,11 @@
   <ion-content>
 
     <ion-list>
-       <ion-item ng-repeat="task in game.data | orderBy:'-lastMessage.timestamp'"
+       <ion-item ng-repeat="task in game.tasks | orderBy:'-lastMessage.timestamp'"
                  class="item-game item-remove-animate item-avatar item-icon-right"
                  type="item-text-wrap" href="#/tab/games/{{ game._id }}/{{ task._id }}">
          <!-- <img ng-src="{{ game.picture }}"> -->
-         <h2>{{ task.name }}</h2>
+         <h2>{{ task.content }}</h2>
          <!-- <p>{{ game.lastMessage.text }}</p> -->
          <span class="last-message-timestamp">{{ task.lastMessage.timestamp }}</span>
          <i class="icon ion-chevron-right icon-accessory"></i>
