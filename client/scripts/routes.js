@@ -26,6 +26,15 @@ export default class RoutesConfig extends Config {
           }
         }
       })
+      .state('tab.setup', {
+        url: '/games/setup/:gameId',
+        views: {
+          'tab-games': {
+            templateUrl: 'client/templates/game-setup.html',
+            controller: 'GameSetupCntrl as setup'
+          }
+        }
+      })
       .state('tab.task', {
         url: '/games/:gameId/:taskId',
         views: {

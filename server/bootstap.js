@@ -2,24 +2,23 @@ import { Meteor } from 'meteor/meteor';
 import { Games, Tasks, Requirements, Images } from '../lib/collections';
 
 Meteor.startup(function() {
-  Games.insert([{
-    _id: 0,
+  let g0 = Games.insert({
     name: 'Twerk or Treat'
-  }]);
-  Games.insert([{
-    _id: 1,
+  });
+  Games.insert({
     name: 'Lazer Brigade'
-  }]);
-  Games.insert([{
-    _id: 2,
+  });
+  Games.insert({
     name: 'FireFart'
-  }]);
-  Games.insert([{
-    _id: 3,
+  });
+  Games.insert({
     name: 'Red'
-  }]);
-  Games.insert([{
-    _id: 4,
+  });
+  Games.insert({
     name: 'Seek and Destroy'
-  }]);
+  });
+  Tasks.insert({
+    gameId: g0,
+    content: "Find a dog."
+  })
 });
