@@ -7,6 +7,7 @@ import 'ionic-scripts';
 import Angular from 'angular';
 import Loader from 'angular-ecmascript/module-loader';
 import { Meteor } from 'meteor/meteor';
+import { ServiceConfiguration } from 'meteor/service-configuration';
 
 // Modules
 import TaskCntrl from '../controllers/task.controller';
@@ -49,3 +50,15 @@ else {
 function onReady() {
   Angular.bootstrap(document, [App]);
 }
+
+Meteor.startup(() => {
+  ServiceConfiguration.configurations.remove({
+      service: 'facebook'
+  });
+
+  ServiceConfiguration.configurations.insert({
+      service: 'facebook',
+      appId: '1113343665413429',
+      secret: 'fc3b67f18e861a86ff5b1c434e43b582'
+  });
+})
