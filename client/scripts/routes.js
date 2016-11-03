@@ -10,10 +10,7 @@ export default class RoutesConfig extends Config {
       })
       .state('login', {
         url: '/',
-        views: {
-          templateUrl: 'client/templates.login.html',
-          controller: 'LoginCntrl as login'
-        }
+        templateUrl: 'client/templates/login.html'
       })
       .state('tab.games', {
         url: '/games',
@@ -123,7 +120,7 @@ export default class RoutesConfig extends Config {
         }
       });
 
-    this.$urlRouterProvider.otherwise('tab/games');
+    this.$urlRouterProvider.otherwise('/');
   }
 }
 
