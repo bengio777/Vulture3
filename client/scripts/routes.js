@@ -40,7 +40,7 @@ export default class RoutesConfig extends Config {
             templateUrl: 'client/templates/game.html',
             controller: 'GameCntrl as game',
             resolve: {
-              currentUser($q) {
+              currentUser($q ) {
                 if (Meteor.userId() === null) {
                   return $q.reject();
                 } else {
@@ -58,7 +58,7 @@ export default class RoutesConfig extends Config {
             templateUrl: 'client/templates/game-setup.html',
             controller: 'GameSetupCntrl as setup',
             resolve: {
-              currentUser($q) {
+              currentUser($q ) {
                 if (Meteor.userId() === null) {
                   return $q.reject();
                 } else {
@@ -76,7 +76,7 @@ export default class RoutesConfig extends Config {
             templateUrl: 'client/templates/task.html',
             controller: 'TaskCntrl as task',
             resolve: {
-              currentUser($q) {
+              currentUser($q ) {
                 if (Meteor.userId() === null) {
                   return $q.reject();
                 } else {
@@ -94,7 +94,7 @@ export default class RoutesConfig extends Config {
             templateUrl: 'client/templates/members.html',
             controller: 'MembersCntrl as members',
             resolve: {
-              currentUser($q) {
+              currentUser($q ) {
                 if (Meteor.userId() === null) {
                   return $q.reject();
                 } else {
@@ -111,7 +111,7 @@ export default class RoutesConfig extends Config {
           'tab-profile': {
             templateUrl: 'client/templates/profile.html',
             resolve: {
-              currentUser($q) {
+              currentUser($q ) {
                 if (Meteor.userId() === null) {
                   return $q.reject();
                 } else {

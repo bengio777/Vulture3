@@ -25,9 +25,7 @@ launch-screen
 accounts-facebook
 service-configuration
 accounts-ui
-okland:camera-ui
 urigo:angular-ui-router
 accounts-password
 dotansimha:accounts-ui-angular
 perak:camera
-mdg:camera
