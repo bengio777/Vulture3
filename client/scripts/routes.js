@@ -10,26 +10,23 @@ export default class RoutesConfig extends Config {
       })
       .state('login', {
         url: '/',
-        views: {
-          templateUrl: 'client/templates.login.html',
-          controller: 'LoginCntrl as login',
-          resolve: {
-            currentUser($q) {
-              if (Meteor.userId() === null) {
-                return $q.reject();
-              } else {
-                return $q.resolve();
-              }
-            }
-          }
-        }
+        templateUrl: 'client/templates/login.html'
       })
       .state('tab.games', {
         url: '/games',
         views: {
           'tab-games': {
             templateUrl: 'client/templates/games.html',
-            controller: 'GamesCntrl as games'
+            controller: 'GamesCntrl as games',
+            resolve: {
+              currentUser($q) {
+                if (Meteor.userId() === null) {
+                  return $q.reject();
+                } else {
+                  return $q.resolve();
+                }
+              }
+            }
           }
         }
       })
@@ -123,7 +120,7 @@ export default class RoutesConfig extends Config {
         }
       });
 
-    this.$urlRouterProvider.otherwise('tab/games');
+    this.$urlRouterProvider.otherwise('/');
   }
 }
 
