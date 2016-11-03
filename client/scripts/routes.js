@@ -8,6 +8,13 @@ export default class RoutesConfig extends Config {
         abstract: true,
         templateUrl: 'client/templates/tabs.html'
       })
+      .state('login', {
+        url: '/',
+        views: {
+          templateUrl: 'client/templates.login.html',
+          controller: 'LoginCntrl as login'
+        }
+      })
       .state('tab.games', {
         url: '/games',
         views: {

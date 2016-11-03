@@ -26,5 +26,7 @@ accounts-facebook
 service-configuration
 accounts-ui
 okland:camera-ui
-dotansimha:accounts-ui-angular
 urigo:angular-ui-router
+accounts-password
+dotansimha:accounts-ui-angular
+perak:camera
