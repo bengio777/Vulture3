@@ -1,7 +1,19 @@
 <ion-view view-title="Task">
   <ion-content>
+
+      <div ng-if="!task.image">
         <button ng-click="task.takePicture()" class='button ion ion-camera icon-accessory task-picture positive task-camera-button'>
          </button>
+
+      </div>
+
+
+      <div ng-if="task.image">
+        <button ng-click="task.resetPicture()" class='button ion ion-camera icon-accessory task-picture positive task-camera-button'>
+        </button>
+
+      </div>
+
 
 
   <div ng-if="task.image">

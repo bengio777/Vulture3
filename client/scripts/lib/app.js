@@ -28,7 +28,6 @@ Angular.module(App, [
   'ionic'
 ]);
 
-
 new Loader(App)
   .load(TaskCntrl)
   .load(MembersCntrl)

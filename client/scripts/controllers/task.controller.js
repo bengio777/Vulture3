@@ -14,41 +14,47 @@ export default class TaskCntrl  extends Controller {
 
     this.helpers({
       image(){
-
-        // var myImage = Images.findOne({ 'taskId' : String(this.$stateParams.taskId), 'userId': String(Meteor.userId())})
-        //
-        // console.log(myImage);
-        //
-        // return myImage;
-
         return Images.findOne({ 'taskId' : String(this.$stateParams.taskId), 'userId': String(Meteor.userId())});
       }
     })
   }
-  showNewImageModal() {
-    this.NewImage.showModal();
-
-  }
 
   takePicture () {
-    // alert('Working. Kinda')
+    // alert('Work in Progress')
     var self = this;
 
     MeteorCamera.getPicture({ width: 200, height: 200 }, function (err, data) {
-
       self.callMethod('addPicture', self.$stateParams.taskId, Meteor.userId(), data, function (err, imageId) {
       if (err) return this.handleError(err);
       // this.$ionicLoading.hide();
       // alert(imageId);
       })
     })
-    $scope.$apply()
+
     stream.stop();
   }
-  remove(task) {
-    this.data.splice(this.data.indexOf(task), 1);
-  }
+
+  resetPicture () {
+        var self = this;
+    if(!confirm("Do you wish to retake the picture?")) return false;
+      self.callMethod('deletePicture', this.image._id, function (err) {
+        if (err) return this.handleError(err);
+      //  console.log(this.image._id);
+    })
+
+        MeteorCamera.getPicture({ width: 200, height: 200 }, function (err, data) {
+          if (data === null) return false;
+          self.callMethod('addPicture', self.$stateParams.taskId , Meteor.userId(), data, function (err) {
+          if (err) return this.handleError(err);
+          // this.$ionicLoading.hide();
+          // alert(imageId);
+          })
+        })
+        $scope.$apply()
+        stream.stop();
+      }
 }
+
 
 TaskCntrl.$name = 'TaskCntrl';
 TaskCntrl.$inject = ['$stateParams', '$state', '$scope', '$log'];
