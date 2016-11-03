@@ -12,7 +12,16 @@ export default class RoutesConfig extends Config {
         url: '/',
         views: {
           templateUrl: 'client/templates.login.html',
-          controller: 'LoginCntrl as login'
+          controller: 'LoginCntrl as login',
+          resolve: {
+            currentUser($q) {
+              if (Meteor.userId() === null) {
+                return $q.reject();
+              } else {
+                return $q.resolve();
+              }
+            }
+          }
         }
       })
       .state('tab.games', {
@@ -29,7 +38,16 @@ export default class RoutesConfig extends Config {
         views: {
           'tab-games': {
             templateUrl: 'client/templates/game.html',
-            controller: 'GameCntrl as game'
+            controller: 'GameCntrl as game',
+            resolve: {
+              currentUser($q) {
+                if (Meteor.userId() === null) {
+                  return $q.reject();
+                } else {
+                  return $q.resolve();
+                }
+              }
+            }
           }
         }
       })
@@ -38,7 +56,16 @@ export default class RoutesConfig extends Config {
         views: {
           'tab-games': {
             templateUrl: 'client/templates/game-setup.html',
-            controller: 'GameSetupCntrl as setup'
+            controller: 'GameSetupCntrl as setup',
+            resolve: {
+              currentUser($q) {
+                if (Meteor.userId() === null) {
+                  return $q.reject();
+                } else {
+                  return $q.resolve();
+                }
+              }
+            }
           }
         }
       })
@@ -47,7 +74,16 @@ export default class RoutesConfig extends Config {
         views: {
           'tab-games': {
             templateUrl: 'client/templates/task.html',
-            controller: 'TaskCntrl as task'
+            controller: 'TaskCntrl as task',
+            resolve: {
+              currentUser($q) {
+                if (Meteor.userId() === null) {
+                  return $q.reject();
+                } else {
+                  return $q.resolve();
+                }
+              }
+            }
           }
         }
       })
@@ -56,7 +92,16 @@ export default class RoutesConfig extends Config {
         views: {
           'tab-members': {
             templateUrl: 'client/templates/members.html',
-            controller: 'MembersCntrl as members'
+            controller: 'MembersCntrl as members',
+            resolve: {
+              currentUser($q) {
+                if (Meteor.userId() === null) {
+                  return $q.reject();
+                } else {
+                  return $q.resolve();
+                }
+              }
+            }
           }
         }
       })
@@ -64,7 +109,16 @@ export default class RoutesConfig extends Config {
         url: '/profile',
         views: {
           'tab-profile': {
-            templateUrl: 'client/templates/profile.html'
+            templateUrl: 'client/templates/profile.html',
+            resolve: {
+              currentUser($q) {
+                if (Meteor.userId() === null) {
+                  return $q.reject();
+                } else {
+                  return $q.resolve();
+                }
+              }
+            }
           }
         }
       });
