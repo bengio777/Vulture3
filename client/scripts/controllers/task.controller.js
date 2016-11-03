@@ -41,7 +41,7 @@ export default class TaskCntrl  extends Controller {
         if (err) return this.handleError(err);
       //  console.log(this.image._id);
     })
-      // $scope.$apply();
+
         MeteorCamera.getPicture({ width: 200, height: 200 }, function (err, data) {
           if (data === null) return false;
           self.callMethod('addPicture', self.$stateParams.taskId , Meteor.userId(), data, function (err) {
@@ -50,9 +50,9 @@ export default class TaskCntrl  extends Controller {
           // alert(imageId);
           })
         })
+        $scope.$apply()
         stream.stop();
-      })
-        $scope.$apply();
+      }
 }
 
 
