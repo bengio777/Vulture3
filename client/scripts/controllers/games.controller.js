@@ -18,7 +18,6 @@ export default class GamesCntrl extends Controller {
           game.num_tasks = game.tasks.length;
           gameData[i] = game;
         })
-        console.log(gameData);
         return gameData
       }
     })

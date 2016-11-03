@@ -7,7 +7,7 @@ export default class NewGameCntrl extends Controller {
     super(...arguments);
   }
 
-  newGame(userId) {
+  newGame() {
     // let game = Games.findOne({ userIds: { $all: [this.currentUserId, userId] } });
     // alert("User "+userId+" is trying to create a game called "+newGameTitle);
     // if (game) {
@@ -16,7 +16,7 @@ export default class NewGameCntrl extends Controller {
     // }
     if (!this.newGameTitle) return false;
 
-    this.callMethod('newGame', this.newGameTitle, userId, (err, gameId) => {
+    this.callMethod('newGame', this.newGameTitle, Meteor.userId(), (err, gameId) => {
       this.hideNewGameModal();
       if (err) return this.handleError(err);
       this.goToSetup(gameId);
