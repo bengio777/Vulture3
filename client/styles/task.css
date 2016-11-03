@@ -3,5 +3,7 @@
   max-height: 125px;
   width: 100%;
   display: flex;
+  position: fixed;
+  top: 0px;
   justify-content: center;
 }
