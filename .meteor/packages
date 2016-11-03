@@ -24,8 +24,10 @@ mobile-status-bar
 launch-screen
 accounts-facebook
 service-configuration
-accounts-ui
 urigo:angular-ui-router
 accounts-password
 dotansimha:accounts-ui-angular
 perak:camera
+twbs:bootstrap
+ian:bootstrap-3-theme
+less

@@ -1,3 +1,20 @@
+#login-screen .accounts-diaglo {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  float: none;
+}
+
+#login-screen #login-dropdown-list {
+  display: block;
+}
+
+/* Hides the toggle that you click on */
+
+#login-screen a.dropdown-toggle {
+  display: none;
+}
+
 #login-buttons {
   width: 100%;
   text-align: center;

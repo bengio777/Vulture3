@@ -12,16 +12,7 @@ export default class RoutesConfig extends Config {
         url: '/',
         views: {
           templateUrl: 'client/templates.login.html',
-          controller: 'LoginCntrl as login',
-          resolve: {
-            currentUser($q) {
-              if (Meteor.userId() === null) {
-                return $q.reject();
-              } else {
-                return $q.resolve();
-              }
-            }
-          }
+          controller: 'LoginCntrl as login'
         }
       })
       .state('tab.games', {
@@ -29,7 +20,16 @@ export default class RoutesConfig extends Config {
         views: {
           'tab-games': {
             templateUrl: 'client/templates/games.html',
-            controller: 'GamesCntrl as games'
+            controller: 'GamesCntrl as games',
+            resolve: {
+              currentUser($q) {
+                if (Meteor.userId() === null) {
+                  return $q.reject();
+                } else {
+                  return $q.resolve();
+                }
+              }
+            }
           }
         }
       })
