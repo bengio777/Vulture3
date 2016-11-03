@@ -3,12 +3,15 @@
    <button ng-click="games.showNewGameModal()" class="button button-clear button-positive button-icon ion-ios-compose-outline"></button>
   </ion-nav-buttons>
   <ion-content>
+    <login-buttons class="title"></login-buttons>
     <ion-list>
        <ion-item ng-repeat="game in games.data | orderBy:'-lastMessage.timestamp'" ng-if="game.isCreated"
                  class="item-game item-remove-animate item-avatar item-icon-right"
                  type="item-text-wrap" href="#/tab/games/{{ game._id }}">
          <h2>{{ game.name }}</h2>
-         <h4 ng-if="game.user">Created by: {{ game.user }}</h4>
+         <h6>{{ game.num_tasks }}</h6>
+         <h4 ng-if="game.owner">Created by: {{ game.owner }}</h4>
+
          <i class="icon ion-chevron-right icon-accessory"></i>
 
          <ion-option-button class="button-assertive" ng-click="games.remove(game)">
@@ -17,7 +20,7 @@
 
        </ion-item>
      </ion-list>
-     <login-buttons></login-buttons>
+
 
   </ion-content>
 </ion-view>
