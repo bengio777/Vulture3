@@ -1,0 +1,15 @@
+#login-buttons {
+  width: 100%;
+  text-align: center;
+  background-color: lightblue;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.login-link-text {
+  width: 100%;
+}
+
+#login-dropdown-list {
+  width: 100%;
+}
