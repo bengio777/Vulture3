@@ -120,7 +120,7 @@ export default class RoutesConfig extends Config {
         }
       });
 
-    this.$urlRouterProvider.otherwise('/');
+    this.$urlRouterProvider.otherwise('tab/games');
   }
 }
 
