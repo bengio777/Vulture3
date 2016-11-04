@@ -32,7 +32,7 @@ export default class NewGameCntrl extends Controller {
   }
 
   goToSetup(gameId) {
-    alert("Game id: "+gameId)
+    // alert("Game id: "+gameId)
     this.$state.go('tab.setup', { gameId });
   }
 
