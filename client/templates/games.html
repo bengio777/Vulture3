@@ -3,7 +3,9 @@
    <button ng-click="games.showNewGameModal()" class="button button-clear button-positive button-icon ion-ios-compose-outline"></button>
   </ion-nav-buttons>
   <ion-content>
+        <h1 class='vulture'>Vulture</h1>
     <login-buttons class="title"></login-buttons>
+
     <ion-list>
        <ion-item ng-repeat="game in games.data | orderBy:'-lastMessage.timestamp'" ng-if="game.isCreated"
                  class="item-game item-remove-animate item-avatar item-icon-right"

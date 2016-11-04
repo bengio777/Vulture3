@@ -19,7 +19,7 @@ export default class GameSetupCntrl extends Controller {
   }
 
   addNewTask() {
-    alert("Adding '"+this.newTaskContent+"' to game "+this.gameId);
+    // alert("Adding '"+this.newTaskContent+"' to game "+this.gameId);
 
     this.callMethod('newTask', this.newTaskContent, this.gameId, (err, taskId) => {
       if (err) return this.handleError(err);
@@ -29,7 +29,7 @@ export default class GameSetupCntrl extends Controller {
   }
 
   createGame() {
-    alert("Creating Game "+this.gameId);
+    // alert("Creating Game "+this.gameId);
     this.callMethod('createGame', this.gameId, (err, gameId) => {
       if (err) return this.handleError(err);
       this.goToGame(gameId)
@@ -38,7 +38,7 @@ export default class GameSetupCntrl extends Controller {
 
 
   cancelGame() {
-    alert("Cancelling Game "+this.gameId)
+    // alert("Cancelling Game "+this.gameId)
   }
 
   goToGame(gameId) {
