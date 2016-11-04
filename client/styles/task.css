@@ -1,12 +1,12 @@
 
 .task-camera-button {
-  max-height: 125px;
+  height: 125px;
   width: 100%;
   display: flex;
   position: fixed;
   top: 0px;
   justify-content: center;
-  
+
 }
 .taskBody{
   width: 100%;
@@ -19,7 +19,23 @@
   background-color: rgba(243, 233, 88, 0.4);
 }*/
 .imgContainer{
-  margin-left: 41vw;
-  padding-top: 15vw;
+  padding-top: 200px;
+
+  text-align: center;
   width: 100%;
+}
+
+.bothButtonDivTask {
+  height: 150px;
+
+}
+
+.icon-class {
+  font-size: 96px;
+}
+
+
+
+i.icon-class.ion-camera {
+  font-size: 200px;
 }
