@@ -84,24 +84,25 @@ export default class RoutesConfig extends Config {
           }
         }
       })
-      .state('tab.members', {
-        url: '/members',
-        views: {
-          'tab-members': {
-            templateUrl: 'client/templates/members.html',
-            controller: 'MembersCntrl as members',
-            resolve: {
-              currentUser($q ) {
-                if (Meteor.userId() === null) {
-                  return $q.reject();
-                } else {
-                  return $q.resolve();
-                }
-              }
-            }
-          }
-        }
-      })
+// TRY AND IMPLEMENT MEMBERS/TEAM FEATURE TO FACIL COMMUNICATION
+      // .state('tab.members', {
+      //   url: '/members',
+      //   views: {
+      //     'tab-members': {
+      //       templateUrl: 'client/templates/members.html',
+      //       controller: 'MembersCntrl as members',
+      //       resolve: {
+      //         currentUser($q ) {
+      //           if (Meteor.userId() === null) {
+      //             return $q.reject();
+      //           } else {
+      //             return $q.resolve();
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // })
       .state('tab.profile', {
         url: '/profile',
         views: {

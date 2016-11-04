@@ -1,0 +1,23 @@
+/*#login-buttons {
+  width: 100%;
+  text-align: center;
+  background-color: gold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.login-link-text {
+  width: 100%;
+}
+
+#login-dropdown-list {
+  width: 100vw;
+  align-content: space-around;
+}*/
+.gamesBody{
+  width: 100%;
+  height: auto;
+  background-image: url(http://www.bootdiskrevolution.com/blog/wp-content/uploads/2013/09/13_treasureMap.jpg);
+  background-size: cover;
+  background-repeat: round;
+}
