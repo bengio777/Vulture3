@@ -15,6 +15,7 @@ import GamesCntrl from '../controllers/games.controller';
 import GameCntrl from '../controllers/game.controller';
 import NewGameCntrl from '../controllers/new-game.controller';
 import GameSetupCntrl from '../controllers/game-setup.controller';
+import ProfileCntrl from '../controllers/profile.controller'
 import CalendarFilter from '../filters/calendar.filter';
 import NewGameService from '../services/new-game.service';
 import RoutesConfig from '../routes';
@@ -35,6 +36,7 @@ new Loader(App)
   .load(GameCntrl)
   .load(NewGameCntrl)
   .load(GameSetupCntrl)
+  .load(ProfileCntrl)
   .load(CalendarFilter)
   .load(NewGameService)
   .load(RoutesConfig);

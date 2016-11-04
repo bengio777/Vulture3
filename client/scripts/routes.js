@@ -107,6 +107,7 @@ export default class RoutesConfig extends Config {
         views: {
           'tab-profile': {
             templateUrl: 'client/templates/profile.html',
+            controller: 'ProfileCntrl as profile',
             resolve: {
               currentUser($q ) {
                 if (Meteor.userId() === null) {
