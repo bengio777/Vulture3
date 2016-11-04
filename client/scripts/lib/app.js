@@ -9,8 +9,9 @@ import { Meteor } from 'meteor/meteor';
 import { ServiceConfiguration } from 'meteor/service-configuration';
 
 // Modules
+import ProfileCntrl from '../controllers/profile.controller';
 import TaskCntrl from '../controllers/task.controller';
-import MembersCntrl from '../controllers/members.controller';
+// import MembersCntrl from '../controllers/members.controller';
 import GamesCntrl from '../controllers/games.controller';
 import GameCntrl from '../controllers/game.controller';
 import NewGameCntrl from '../controllers/new-game.controller';
@@ -30,8 +31,9 @@ Angular.module(App, [
 
 
 new Loader(App)
+  .load(ProfileCntrl)
   .load(TaskCntrl)
-  .load(MembersCntrl)
+  // .load(MembersCntrl)
   .load(GamesCntrl)
   .load(GameCntrl)
   .load(NewGameCntrl)

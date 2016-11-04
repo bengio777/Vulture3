@@ -23,7 +23,7 @@ export default class TaskCntrl  extends Controller {
     // alert('Work in Progress')
     var self = this;
 
-    MeteorCamera.getPicture({ width: 200, height: 200 }, function (err, data) {
+    MeteorCamera.getPicture({ width: 400, height: 400 }, function (err, data) {
       self.callMethod('addPicture', self.$stateParams.taskId, Meteor.userId(), data, function (err, imageId) {
       if (err) return this.handleError(err);
       // this.$ionicLoading.hide();
