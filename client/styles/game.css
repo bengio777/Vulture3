@@ -1,0 +1,10 @@
+.gameBody{
+  width: 100%;
+  height: auto;
+  background-image: url(http://www.bootdiskrevolution.com/blog/wp-content/uploads/2013/09/13_treasureMap.jpg);
+  background-size: cover;
+  background-repeat: round;
+}
+.item-complex.item-icon-right .item-content{
+  background-color: rgba(243, 233, 88, 0.4);
+}

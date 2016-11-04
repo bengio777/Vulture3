@@ -6,4 +6,20 @@
   position: fixed;
   top: 0px;
   justify-content: center;
+  
+}
+.taskBody{
+  width: 100%;
+    height: auto;
+  background-image: url(http://www.bootdiskrevolution.com/blog/wp-content/uploads/2013/09/13_treasureMap.jpg);
+  background-size: cover;
+  background-repeat: round;
+}
+/*.button:after{
+  background-color: rgba(243, 233, 88, 0.4);
+}*/
+.imgContainer{
+  margin-left: 41vw;
+  padding-top: 15vw;
+  width: 100%;
 }
